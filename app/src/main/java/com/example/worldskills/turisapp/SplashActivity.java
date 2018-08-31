@@ -1,6 +1,7 @@
 package com.example.worldskills.turisapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
@@ -15,6 +16,9 @@ public class SplashActivity extends AppCompatActivity {
     ImageView imgLogo;
     TextView tvWSS;
 
+    Typeface typeface;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +27,10 @@ public class SplashActivity extends AppCompatActivity {
         //Instancio el componente junto con el xml.
         imgLogo = findViewById(R.id.imgLogoT);
         tvWSS = findViewById(R.id.tvWSS);
+
+        typeface = Typeface.createFromAsset(getAssets(),"fonts/poorich.ttf");
+
+        tvWSS.setTypeface(typeface);
 
         //Creo un nuevo hilo
         Thread hilo = new Thread(){
