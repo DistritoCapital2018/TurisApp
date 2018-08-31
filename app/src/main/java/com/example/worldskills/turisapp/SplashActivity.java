@@ -41,7 +41,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    //Duración del metodo run
+                    //Duración del metodo run.
                     sleep(2000);
                     //Capturo el error
                 } catch (InterruptedException e) {
