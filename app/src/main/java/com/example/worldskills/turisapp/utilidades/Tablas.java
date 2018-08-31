@@ -20,7 +20,7 @@ public class Tablas {
     public static final String CREAR_TABLA_SITIO = "CREATE TABLE " + TABLA_SITIO + " (" + CAMPO_ID_S + " INTEGER PRIMARY KEY AUTOINCREMENT, " + CAMPO_NOMBRE_S + " TEXT, " + CAMPO_DESCRIPCION_CORTA_S + " TEXT, "
             + CAMPO_UBICACION_S + " TEXT, " + CAMPO_DESCRIPCION_S + " TEXT, " + CAMPO_LATITUD_S + " REAL, " + CAMPO_LONGITUD_S + " REAL);";
 
-    // --------------------------- Tabla "HOTELES" ---------------------------
+    // --------------------------- Tabla "HOTELES" ----------------------------
 
     public static final String TABLA_HOTEL = "hoteles";
     public static final String CAMPO_ID_H = "id_hoteles";
