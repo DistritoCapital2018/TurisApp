@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity
         //Apenas inicie el fragment me carge el de Inicio con su respectivo contenido.
         getSupportFragmentManager().beginTransaction().add(R.id.content_main, inicioFragment).commit();
 
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
