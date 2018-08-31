@@ -3,14 +3,23 @@ package com.example.worldskills.turisapp.fragments;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.worldskills.turisapp.R;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.OnMapReadyCallback;
 
-public class MapFragment extends Fragment {
+public class MapFragment extends Fragment implements OnMapReadyCallback {
+
+    MapView mapView;
+    GoogleMap gMap;
 
     private String mParam1;
     private String mParam2;
@@ -64,6 +73,31 @@ public class MapFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public void onViewCreated(View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        if(mapView != null){
+
+            mapView.onStart();
+            mapView.onResume();
+            mapView.getMapAsync(this);
+
+        }
+
+    }
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+
+        MapsInitializer.initialize(getActivity());
+
+        gMap = googleMap;
+
+
+
     }
 
     public interface OnFragmentInteractionListener {

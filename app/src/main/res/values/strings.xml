@@ -21,4 +21,9 @@
     <string name="tvDescripcion">Descripcion</string>
     <string name="tvUbicacion">Ubicacion</string>
     <string name="worldskills">WorldSkills 2018</string>
+    <string name="settingsInicio">Inicio</string>
+    <string name="settingsSitios">Sitios</string>
+    <string name="settingsHoteles">Hoteles</string>
+    <string name="settingsRestaurantes">Restaurantes</string>
+    <string name="settingsSalir">Salir</string>
 </resources>
