@@ -3,7 +3,9 @@ package com.example.worldskills.turisapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.worldskills.turisapp.fragments.MainActivity;
 
@@ -11,6 +13,7 @@ public class SplashActivity extends AppCompatActivity {
 
     //Se instancian los componentes del layout.
     ImageView imgLogo;
+    TextView tvWSS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +22,7 @@ public class SplashActivity extends AppCompatActivity {
 
         //Instancio el componente junto con el xml.
         imgLogo = findViewById(R.id.imgLogoT);
+        tvWSS = findViewById(R.id.tvWSS);
 
         //Creo un nuevo hilo
         Thread hilo = new Thread(){
