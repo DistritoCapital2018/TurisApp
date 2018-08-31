@@ -1,11 +1,13 @@
 package com.example.worldskills.turisapp.fragments;
 
 
+import android.content.DialogInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -22,6 +24,7 @@ import com.example.worldskills.turisapp.interfaces.InterfaceFragments;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, InterfaceFragments {
 
+    //Instancio los componentes que nesecito.
     Toolbar toolbar;
 
     @Override
@@ -112,8 +115,10 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_salir) {
 
+            alertaSalida();
+
         }
-        if(fragmentTransaction){
+        if (fragmentTransaction) {
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.content_main, miFragment, null)
                     .commit();
@@ -125,8 +130,32 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    private void alertaSalida() {
+        //Creo un nuevo Alert Dialog para el usuario al momento que desee salir de la aplicación.
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getApplicationContext());
+        alertDialog.setCancelable(false);
+        alertDialog.setMessage("¿Esta seguro que desea salir de la aplicación?");
+        alertDialog.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                //Finaliza la aplicación, si presiona Aceptar.
+                finish();
+            }
+        });
+        alertDialog.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+
+    }
+
     @Override
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+
 }
