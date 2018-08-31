@@ -21,13 +21,14 @@ import com.example.worldskills.turisapp.interfaces.InterfaceFragments;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, InterfaceFragments {
-
+    //Instancio el toolbar para asignar titulos.
     Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Instancio el componente con el xml.
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         //Agregar titulo fragment Inicio
         toolbar.setTitle("Inicio");
