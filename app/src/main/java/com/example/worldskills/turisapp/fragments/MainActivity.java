@@ -37,6 +37,11 @@ public class MainActivity extends AppCompatActivity
 
         //Rama developer
 
+        //Instacio el fragment a cargar especifico por defecto.
+        InicioFragment inicioFragment = new InicioFragment();
+        //Apenas inicie el fragment me carge el de Inicio con su respectivo contenido.
+        getSupportFragmentManager().beginTransaction().add(R.id.content_main, inicioFragment).commit();
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
