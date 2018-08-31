@@ -18,7 +18,7 @@
             android:title="@string/nav_hotel" />
         <item
             android:id="@+id/nav_restaurante"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/ic_restaurant"
             android:title="@string/nav_restaurante" />
     </group>
 
