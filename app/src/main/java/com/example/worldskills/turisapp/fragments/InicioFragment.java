@@ -8,9 +8,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.worldskills.turisapp.R;
+import com.example.worldskills.turisapp.sqliteHelper.ConexionSQLiteOpenHelper;
+import com.example.worldskills.turisapp.utilidades.Tablas;
 
 
 public class InicioFragment extends Fragment {
@@ -18,6 +21,9 @@ public class InicioFragment extends Fragment {
     //Instancio los componentes que nesecito
     View view;
     Typeface typeface;
+    TextView tvDescription;
+
+    ConexionSQLiteOpenHelper conexionSQLiteOpenHelper;
 
     private OnFragmentInteractionListener mListener;
 
@@ -37,16 +43,23 @@ public class InicioFragment extends Fragment {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
         }
+
+
+        conexionSQLiteOpenHelper = new ConexionSQLiteOpenHelper(getContext(), Tablas.DATABASE,null,1);
     }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_inicio, container, false);
+
+        tvDescription = view.findViewById(R.id.tvDescription);
         try {
 
             typeface = Typeface.createFromAsset(getContext().getAssets(),"fonts/poorich.ttf");
+            tvDescription.setTypeface(typeface);
         }catch (Exception e)
         {
             Toast.makeText(getContext(),"Error en la Tipografia",Toast.LENGTH_SHORT).show();

@@ -16,7 +16,7 @@ public class ConexionSQLiteOpenHelper extends SQLiteOpenHelper{
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL(Tablas.CREAR_TABLA_SITIO);
-        db.execSQL(Tablas.CREAR_TABLA_HOTEL);
+       /* db.execSQL(Tablas.CREAR_TABLA_HOTEL);
         db.execSQL(Tablas.CREAR_TABLA_RESTAURANTE);
 
         db.execSQL(Tablas.INSERTAR_SITIO_1);
@@ -35,7 +35,7 @@ public class ConexionSQLiteOpenHelper extends SQLiteOpenHelper{
         db.execSQL(Tablas.INSERTAR_RESTAURANTE_2);
         db.execSQL(Tablas.INSERTAR_RESTAURANTE_3);
         db.execSQL(Tablas.INSERTAR_RESTAURANTE_4);
-        db.execSQL(Tablas.INSERTAR_RESTAURANTE_5);
+        db.execSQL(Tablas.INSERTAR_RESTAURANTE_5);*/
 
     }
 
@@ -45,6 +45,7 @@ public class ConexionSQLiteOpenHelper extends SQLiteOpenHelper{
         db.execSQL("DROP TABLE IF EXISTS "+Tablas.TABLA_SITIO);
         db.execSQL("DROP TABLE IF EXISTS "+Tablas.TABLA_HOTEL);
         db.execSQL("DROP TABLE IF EXISTS "+Tablas.TABLA_RESTAURANTE);
+        onCreate(db);
 
     }
 }

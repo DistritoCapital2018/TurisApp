@@ -3,8 +3,8 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">TurisApp</string>
+    <string name="nav_header_subtitle">WorldSkills</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="nav_home">Inicio</string>
@@ -21,4 +21,6 @@
     <string name="tvDescripcion">Descripcion</string>
     <string name="tvUbicacion">Ubicacion</string>
     <string name="worldskills">WorldSkills 2018</string>
+    <string name="tvDescripcionApp">Con TurisApp podras conocer los mejores lugares del Pais
+    Los mejores hoteles, restaurantes y Centros Comerciales</string>
 </resources>

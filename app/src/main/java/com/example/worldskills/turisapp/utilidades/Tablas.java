@@ -54,12 +54,16 @@ public class Tablas {
     // --------------------------- Insercion a Tabla "SITIO (Centros Comerciales)" ---------------------------
 
 
-    public static final String INSERTAR_SITIO_1 = "INSERT INTO " + TABLA_SITIO + "(" + CAMPO_NOMBRE_S + "," + CAMPO_DESCRIPCION_CORTA_S + "," + CAMPO_UBICACION_S + ","
+    public static final String INSERTAR_SITIO_1 = "INSERT INTO " + TABLA_SITIO + "(" + CAMPO_NOMBRE_S + "," + CAMPO_DESCRIPCION_CORTA_S + "," + CAMPO_UBICACION_S + "," + CAMPO_LATITUD_S + "," + CAMPO_LONGITUD_S + ") VALUES ('Cerro de Monserrate','El Cerro de Monserrate los espera durante los 365 días del año.'," +
+            "'Carrera 2 E No. 21-48 | Paseo Bolívar, Bogota, Colombia'" +
+            ",4.6056941,-74.0642803);";
+
+    /*public static final String INSERTAR_SITIO_1 = "INSERT INTO " + TABLA_SITIO + "(" + CAMPO_NOMBRE_S + "," + CAMPO_DESCRIPCION_CORTA_S + "," + CAMPO_UBICACION_S + ","
             + CAMPO_DESCRIPCION_S + "," + CAMPO_LATITUD_S + "," + CAMPO_LONGITUD_S + ") VALUES ('Cerro de Monserrate','El Cerro de Monserrate los espera durante los 365 días del año.'," +
             "'Carrera 2 E No. 21-48 | Paseo Bolívar, Bogota, Colombia','El cerro de Monserrate es el más conocido de los cerros Orientales de Bogotá. Junto a Guadalupe es uno de los cerros tutelares de la ciudad. " +
             "Monserrate tiene una altitud de 3152 m y se ubica sobre la cordillera oriental.1 Los cerros de Bogotá, de origen sedimentario, tienen por lo menos 16 millones de años de antigüedad, con rocas de edad cretácica pertenecientes al Grupo guadalupe, " +
             "en lo que se refiere al aspecto geológico. Hasta mediados del siglo XVII fue conocido como cerro de Las Nieves. La basílica del Señor de Monserrate ha sido lugar de peregrinación religiosa desde la época colonial y se constituye en un atractivo natural, " +
-            "religioso, gastronómico de la ciudad. Se puede ascender al cerro por el sendero peatonal, por teleférico o por funicular.',4.6056941,-74.0642803)";
+            "religioso, gastronómico de la ciudad. Se puede ascender al cerro por el sendero peatonal, por teleférico o por funicular.',4.6056941,-74.0642803)";*/
 
     public static final String INSERTAR_SITIO_2 = "INSERT INTO " + TABLA_SITIO + "(" + CAMPO_NOMBRE_S + "," + CAMPO_DESCRIPCION_CORTA_S + "," + CAMPO_UBICACION_S + ","
             + CAMPO_DESCRIPCION_S + "," + CAMPO_LATITUD_S + "," + CAMPO_LONGITUD_S + ") VALUES ('Parque Metropolitano Simon Bolivar','Área verde urbana con recorridos para caminantes y ciclistas, lago para andar en bote y un área de juego.','Av. Calle 53 y Av. Esmeralda s/n, Bogotá, Cundinamarca,'"
