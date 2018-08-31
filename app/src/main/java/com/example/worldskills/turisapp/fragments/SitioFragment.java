@@ -51,6 +51,7 @@ public class SitioFragment extends Fragment {
         //Inflo la vista de mi fragment sitio
         view = inflater.inflate(R.layout.fragment_sitio, container, false);
 
+
         //Asigno el componente junto con el xml
         floSitio = view.findViewById(R.id.floatingSitio);
 
