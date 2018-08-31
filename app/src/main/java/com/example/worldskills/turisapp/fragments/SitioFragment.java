@@ -3,7 +3,9 @@ package com.example.worldskills.turisapp.fragments;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +14,11 @@ import com.example.worldskills.turisapp.R;
 
 
 public class SitioFragment extends Fragment {
+
+    //Instancio los componentes que nesecito
+    View view;
+    FloatingActionButton floSitio;
+    FragmentManager fragmentManager;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -40,7 +47,31 @@ public class SitioFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sitio, container, false);
+
+        //Inflo la vista de mi fragment sitio
+        view = inflater.inflate(R.layout.fragment_sitio, container, false);
+
+
+        //Asigno el componente junto con el xml
+        floSitio = view.findViewById(R.id.floatingSitio);
+
+        //Asigno el onClick al boton flotante
+        floSitio.setOnClickListener(new View.OnClickListener() {
+            //Realizo la transición entre fragments para abrir el mapa
+            @Override
+            public void onClick(View v) {
+                MapFragment mapFragment = new MapFragment();
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_main, mapFragment)
+                        .commit();
+
+            }
+        });
+
+        return view;
+
+
+
     }
 
     public void onButtonPressed(Uri uri) {
