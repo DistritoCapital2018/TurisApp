@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle("Inicio");
         setSupportActionBar(toolbar);
 
-
         //Rama carlos developer
 
         //Instacio el fragment a cargar especifico por defecto.
